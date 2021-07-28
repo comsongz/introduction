@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Gudea&display=swap" rel="stylesheet" />
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            position: relative;
+            top: 80px;
+            left: 0px;
+        }
+
+        header{
+           height: 78px;
+           width: 100%;
+           position: relative;
+           top: 0px;
+           left: 0px;
+       }
+
+        /* 링크들 3개 */
+        .link01{
+        width: 178px;
+        height: 21px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        left: 713px;
+        top: 10px;
+        }
+        .link02{
+        width: 121px;
+        height: 21px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        left: 1024px;
+        }
+        .link03{
+        width: 84px;
+        height: 21px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        left: 1278px;
+        }
+        .link-text {
+        width: 148px;
+        color: rgba(98,98,98,1);
+        position: absolute;
+        top: 0px;
+        left: 30px;
+        font-family: Roboto;
+        font-weight: Regular;
+        font-size: 18px;
+        opacity: 1;
+        text-align: left;
+        }
+        .link-circle{
+        width: 15px;
+        height: 15px;
+        opacity: 1;
+        position: absolute;
+        top: 3px;
+        left: 0px;
+        border-radius: 50%;
+        }
+        #c_red {background: rgba(255,94,87,1);}
+        #c_yellow {background: #FFBB2E;}
+        #c_green {background: #38C149;}
+
+        /* 햄버거 버튼 position:sticky 너비가 600px정도 이하되면 햄버거 버튼 위치 옮기든 해야할듯*/
+        .hamburger_button {
+        width: 2.4%;
+        min-width: 25px;
+        height: 35px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        position: absolute;
+        top: 100px;
+        left: 2.5%; 
+        }
+        .ham{
+            width: 100%;
+            height: 5px;
+            background: rgba(0,48,135,1);
+            opacity: 1;
+            border-radius: 3px;
+        }
+        #ham_1 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        }
+        #ham_2 {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        }
+        #ham_3 {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        }
+        #ham_4 {
+        position: absolute;
+        top: 30px;
+        left: 0px;
+        }
+ 
+        #sub_intro_page{
+            position: relative;
+            border: 3px solid black ;
+            width: 89%;
+            height: 2800px;
+            left: 7%;
+        }
+
+        /* 타이틀 */
+        #title-text {
+            width: 150px;
+            position: absolute;
+            top: 20px;
+            left: 51%;
+            transform: translateX(-50%);
+            color: #636363;
+            font-family: Roboto;
+            font-weight: Regular;
+            font-size: 36px;
+        }
+
+        /* 학과별 과목 그룹 */
+        .common-subject{
+            /*border: 3px solid black ;*/
+            width: 20%;
+            height: 2500px;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cs-subject{
+            /*border: 3px solid green ;*/
+            width: 35%;
+            height: 2500px;
+            position: absolute;
+            top: 100px;
+            left: 2%;
+        }
+
+        .sw-subject{
+            /*border: 3px solid rgb(242, 135, 5) ;*/
+            width: 35%;
+            height: 2500px;
+            position: absolute;
+            top: 100px;
+            left: 63%;
+        }
+         /* box들 다 absolute 높이빼고 여기서 다 지정, 각자 학부영역의 absolute로 붙음 */
+        
+         /* 과목 박스 */
+        .box {
+            width: 160px;
+            height: 90px;
+            z-index: 0;
+        }
+
+        .box-center{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); 
+            z-index: inherit;
+        }
+        .box-left{
+            position:absolute;
+            left: 25%;
+            transform: translateX(-50%);  
+            z-index: inherit;
+        }
+        .box-right{
+            position:absolute;
+            left: 75%;
+            transform: translateX(-50%);
+            z-index: inherit;
+        }
+        /* 과목 박스 배경 */
+        .box-back1 {
+        width: 160px;
+        height: 90px;
+        background: rgba(250,250,250,1);
+        border: 1px solid rgba(119,113,113,1);
+        border-radius: 23px;
+        position: relative;
+        /*top: 0px;
+        left: 0px; 왠지 그림자 넣으니까 촌스러움
+        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);*/
+        }       
+        .box-back2 {
+        width: 160px;
+        height: 90px;
+        background: rgba(196,196,196,1);
+        border: 1px solid rgba(119,113,113,1);
+        border-radius: 23px;
+        position: relative;
+        }
+        .box-back3 {
+            width: 160px;
+            height: 90px;
+            background: rgba(223,235,255,1);
+            border: 1px solid rgba(119,113,113,1);
+            border-radius: 23px;
+            position: relative;
+        }
+
+        /* 과목 박스 text 1:두줄짜리, 2:한줄짜리 */
+        .box-text1 {
+            width: 120px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 23px;
+            left: 21px;
+            font-family: Gudea;
+            font-weight: Regular;
+            font-size: 18px;
+            text-align: center;
+        }
+        .box-text2 {
+            width: 120px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 35px;
+            left: 21px;
+            font-family: Gudea;
+            font-weight: Regular;
+            font-size: 18px;
+            text-align: center;
+        }
+        /* 각자 과목 박스들의 높이 지정 */
+        #cs1,#sw3,#sw4,#l3{top: 580px;}
+        #cs2,#cs3,#sw5,#l4{top: 870px;}
+        #cs4,#cs5,#sw6,#sw7{top: 1210px;}
+        #cs6,#cs7,#sw8,#l5{top: 1330px;}
+        #cs8,#cs9,#sw10,#sw11,#l6{top: 1730px;}
+        #cs10,#cs11,#sw12,#sw13,#l7{top: 1900px;}
+        #cs12, #cs13 {top: 2020px;}
+        #cs14{top: 2220px;}
+        #cs15,#sw14,#l8{top: 2400px;}
+        #c1{top: 30px;}
+        #c2{top: 200px;}
+        #c3{top: 320px;}
+        #c4{top: 490px;}
+        #c5{top: 660px;}
+        #c6{top: 780px;}
+        #c7{top: 950px;}
+        #c8{top: 1070px;}
+        #c9{top: 1240px;}
+        #c10{top: 1410px;}
+        #c11{top: 1530px;}
+        #c12{top: 1650px;}
+        #c13{top: 1820px;}
+        #c14{top: 1990px;}
+        #c15{top: 2160px;}
+        #c16{top: 2280px;}
+        #sw1{top: 110px;}
+        #sw2{top: 410px;}
+        #sw9{top: 1610px}
+
+        /* 과목 소개 line */
+        .lines {
+            border: 3px solid red ;
+            width: 30%;
+            height: 2500px;
+            position: relative;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+       
+        /* 소개 라인별 구역*/
+        .line1 { /* 0-- 모양*/
+            width: 210px;
+            height: 30px;
+            position: absolute;
+            left: 50%;
+            transform: translateY(70%);
+            z-index: 8;
+        }
+        .line2 { /* --0-- 모양 */
+            width: 390px;
+            height: 30px;
+            position: absolute;
+            left: center;
+            transform: translateY(70%);
+            z-index: 8;
+        }
+
+        #l1{
+            top: 118px;
+        }
+        #l2{
+            top: 411px;
+        }
+
+        /*라인의 형태가 3가지임 0- & -0- &순으로 1,2*/
+        .line-circle01 {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0px;
+            left: 0%;
+            transform: translateX(-50%);
+            border: 8px solid rgba(255,204,99,1);
+        }
+        .line-circle02 {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid rgba(255,204,99,1);
+        }
+
+        .cs-line02 {
+            width: 180px;
+            opacity: 1;
+            position: absolute;
+            top: 7px;
+            left: 0%;
+            border: 8px solid #FFC0BD;
+        }
+        .sw-line01 {
+            width: 180px;
+            opacity: 1;
+            position: absolute;
+            top: 7px;
+            left: 7%;
+            border: 8px solid rgba(200,238,197,1);
+        }
+        .sw-line02 {
+            width: 180px;
+            opacity: 1;
+            position: absolute;
+            top: 7px;
+            left: 54%;
+            border: 8px solid rgba(200,238,197,1);
+        }
+
+        .main-line {
+        height: 2500px;
+        width: 5px;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 10px solid rgba(255,229,175,1);
+        z-index: 9999;
+        }
+
+    </style>
+
+    <title>교과목 소개</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="link01">
+            <span class="link-text">Sookmyung Portal</span>
+            <div class="link-circle" id="c_red"></div>
+        </div>
+        <div class="link02">
+            <span class="link-text">SnowBoard</span>
+            <div class="link-circle" id="c_yellow"></div>
+        </div>
+        <div class="link03">
+            <span class="link-text">Snowe</span>
+            <div class="link-circle" id="c_green"></div>
+        </div>
+    </header>
+
+    <div class="hamburger_button">
+        <div class="ham" id="ham_1"></div>
+        <div class="ham" id="ham_2"></div>
+        <div class="ham" id="ham_3"></div>
+        <div class="ham" id="ham_4"></div>
+    </div>
+
+    <div id="sub_intro_page">
+        <div id="title-text">과목 소개</div>
+        
+            
+        <!-- 컴과 영역 -->
+        <div class="cs-subject">
+                <div class="box box-right" id="cs1"><div class="box-back1"></div>
+                <span class="box-text1">윈도우<br>프로그래밍</span></div>
+
+                <div class="box box-right" id="cs2"><div class="box-back2"></div>
+                <span class="box-text1">디지털<br>논리회로</span></div>
+                <div class="box box-left" id="cs3"><div class="box-back1"></div>
+                <span class="box-text1">리눅스<br>시스템</span></div>
+
+                <div class="box box-right" id="cs4"><div class="box-back2"></div>
+                <span class="box-text1">프로그래밍<br>언어론</span></div>
+                <div class="box box-left" id="cs5"><div class="box-back1"></div>
+                <span class="box-text1">컴퓨터<br>구조</span></div>
+                <div class="box box-right" id="cs6"><div class="box-back1"></div>
+                <span class="box-text1">웹시스템<br>설계</span></div>
+                <div class="box box-left" id="cs7"><div class="box-back1"></div>
+                <span class="box-text1">시스템<br>프로그래밍</span></div>
+
+                <div class="box box-right" id="cs8"><div class="box-back1"></div>
+                <span class="box-text1">컴퓨터<br>네트워크1</span></div>
+                <div class="box box-left" id="cs9"><div class="box-back1"></div>
+                <span class="box-text1">소프트웨어<br>공학</span></div>
+
+                <div class="box box-right" id="cs10"><div class="box-back1"></div>
+                <span class="box-text2">컴파일러</span></div>
+                <div class="box box-left" id="cs11"><div class="box-back1"></div>
+                <span class="box-text1">데이터베이스<br>프로그래밍</span></div>
+                <div class="box box-right" id="cs12"><div class="box-back1"></div>
+                <span class="box-text1">컴퓨터<br>네트워크2</span></div>
+                <div class="box box-left" id="cs13"><div class="box-back1"></div>
+                <span class="box-text1">임베디드<br>시스템</span></div>
+
+                <div class="box box-center" id="cs14"><div class="box-back1"></div>
+                <span class="box-text2">컴퓨터특강</span></div>
+
+                <div class="box box-right" id="cs15"><div class="box-back1"></div>
+                <span class="box-text1">영상 정보<br>처리</span></div>
+        </div>
+            
+        <!-- 공통 과목 영역 -->
+        <div class="common-subject">
+                <div class="box box-center" id="c1"><div class="box-back3"></div>
+                <span class="box-text1">컴퓨터과학의 이해</span></div>
+                
+                <!--컴과이에 대한 소개 넣어야댐-->
+
+                <div class="box box-center" id="c2"><div class="box-back1"></div>
+                <span class="box-text1">소프트웨어의<br>이해</span></div>
+                <div class="box box-center" id="c3"><div class="box-back1"></div>
+                <span class="box-text1">프로그래밍<br>개론</span></div>
+
+                <div class="box box-center" id="c4"><div class="box-back1"></div>
+                <span class="box-text2">컴퓨터 수학</span></div>
+
+                <div class="box box-center" id="c5"><div class="box-back2"></div>
+                <span class="box-text2">자료구조</span></div>
+                <div class="box box-center" id="c6"><div class="box-back2"></div>
+                <span class="box-text1">데이터<br>사이언스 개론</span></div>
+
+                <div class="box box-center" id="c7"><div class="box-back1"></div>
+                <span class="box-text1">자바<br>프로그래밍</span></div>
+                <div class="box box-center" id="c8"><div class="box-back1"></div>
+                <span class="box-text1">컴퓨터<br>그래픽스</span></div>
+
+                <div class="box box-center" id="c9"><div class="box-back2"></div>
+                <span class="box-text2">운영체제</span></div>
+
+                <div class="box box-center" id="c10"><div class="box-back2"></div>
+                <span class="box-text2">알고리즘</span></div>
+                <div class="box box-center" id="c11"><div class="box-back1"></div>
+                <span class="box-text1">데이터<br>베이스와 설계</span></div>
+                <div class="box box-center" id="c12"><div class="box-back1"></div>
+                <span class="box-text1">모바일<br>소프트웨어</span></div>
+
+                <div class="box box-center" id="c13"><div class="box-back1"></div>
+                <span class="box-text2">인공지능</span></div>
+
+                <div class="box box-center" id="c14"><div class="box-back1"></div>
+                <span class="box-text1">시스템 종합<br>설계</span></div>
+
+                <div class="box box-center" id="c15"><div class="box-back1"></div>
+                <span class="box-text1">네트워크<br>보안</span></div>
+                <div class="box box-center" id="c16"><div class="box-back1"></div>
+                <span class="box-text1">클라우드<br>시스템</span></div>
+        </div>
+        
+        <!-- 소웨과목 영역 -->
+        <div class="sw-subject">
+                <div class="box box-left" id="sw1"><div class="box-back1"></div>
+                <span class="box-text1">소프트웨어<br>진로 탐색</span></div>
+
+                <div class="box box-left" id="sw2"><div class="box-back3"></div>
+                <span class="box-text2">통계학 입문</span></div>
+                
+                <div class="box box-left" id="sw3"><div class="box-back1"></div>
+                <span class="box-text1">경영 정보<br>시스템</span></div>
+                <div class="box box-right" id="sw4"><div class="box-back1"></div>
+                <span class="box-text1">인터넷 기술<br>융합</span></div>
+
+                <div class="box box-left" id="sw5"><div class="box-back2"></div>
+                <span class="box-text1">컴퓨터 시스템<br>기초</span></div>
+
+                <div class="box box-left" id="sw6"><div class="box-back1"></div>
+                <span class="box-text1">데이터 마이닝<br>분석</span></div>
+                <div class="box box-right" id="sw7"><div class="box-back1"></div>
+                <span class="box-text1">소프트웨어<br>분석 및 설계</span></div>
+                <div class="box box-left" id="sw8"><div class="box-back1"></div>
+                <span class="box-text1">사용자<br>인터페이스</span></div>
+
+                <div class="box box-left" id="sw9"><div class="box-back1"></div>
+                <span class="box-text2">스토리지</span></div>
+                <div class="box box-left" id="sw10"><div class="box-back1"></div>
+                <span class="box-text2">빅데이터</span></div>
+                <div class="box box-right" id="sw11"><div class="box-back1"></div>
+                <span class="box-text1">인터렉티브<br>미디어</span></div>
+
+                <div class="box box-left" id="sw12"><div class="box-back1"></div>
+                <span class="box-text1">바이오<br>인포메틱스 개론</span></div>
+                <div class="box box-right" id="sw13"><div class="box-back1"></div>
+                <span class="box-text2">소융특강</span></div>
+
+                <div class="box box-left" id="sw14"><div class="box-back1"></div>
+                <span class="box-text1">사물인터넷<br>시스템</span></div>
+        </div>
+
+      
+
+        <div class="lines">
+            <div class="line1" id="l1">
+                <div class="line-circle01"></div>
+                <div class="sw-line01"></div>
+            </div>
+            <div class="line1" id="l2">
+                <div class="line-circle01"></div>
+                <div class="sw-line01"></div>
+            </div>
+            <div class="line2" id="l3">
+                <div class="line-circle02"></div>
+                <div class="sw-line02"></div>
+                <div class="cs-line02"></div>
+            </div>
+            <div class="line2" id="l4">
+                <div class="line-circle02"></div>
+                <div class="sw-line02"></div>
+                <div class="cs-line02"></div>
+            </div>
+            <div class="line2" id="l5">
+                <div class="line-circle02"></div>
+                <div class="sw-line02"></div>
+                <div class="cs-line02"></div>
+            </div>
+            <div class="line2" id="l6">
+                <div class="line-circle02"></div>
+                <div class="sw-line02"></div>
+                <div class="cs-line02"></div>
+            </div>
+            <div class="line2" id="l7">
+                <div class="line-circle02"></div>
+                <div class="sw-line02"></div>
+                <div class="cs-line02"></div>
+            </div>
+            <div class="line2" id="l8">
+                <div class="line-circle02"></div>
+                <div class="sw-line02"></div>
+                <div class="cs-line02"></div>
+            </div> 
+            <div class="main-line"></div>  
+        </div>
+    </div>
+
+    <script>
+        const modals = document.querySelectorAll(".box")
+        modals.forEach(function(box){
+            box.addEventListener('click', popModal); /*mouseover 이벤트*/
+        });
+
+        function popModal(event){
+            console.log("!")
+            /*모달창 띄우는 이벤트 각 과목마다 소개 다르게 해서 넣기*/
+        }
+
+        
+    </script>
+
+
+</body>
+</html>
