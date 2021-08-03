@@ -181,88 +181,61 @@
             width: 160px;
             height: 90px;
             z-index: 0;
+            border: 1px solid rgba(119,113,113,1);
+            border-radius: 23px;
+            position: absolute;
         }
-
         .box-center{
             position: absolute;
             left: 50%;
             transform: translateX(-50%); 
-            z-index: inherit;
         }
         .box-left{
             position:absolute;
             left: 25%;
             transform: translateX(-50%);  
-            z-index: inherit;
         }
         .box-right{
             position:absolute;
             left: 75%;
             transform: translateX(-50%);
-            z-index: inherit;
         }
-        /* 과목 박스 배경 */
         .box-back1 {
-        width: 160px;
-        height: 90px;
         background: rgba(250,250,250,1);
-        border: 1px solid rgba(119,113,113,1);
-        border-radius: 23px;
-        position: relative;
         /*top: 0px;
         left: 0px; 왠지 그림자 넣으니까 촌스러움
         box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);*/
         }       
-        .box-back2 {
-        width: 160px;
-        height: 90px;
-        background: rgba(196,196,196,1);
-        border: 1px solid rgba(119,113,113,1);
-        border-radius: 23px;
-        position: relative;
-        }
-        .box-back3 {
-            width: 160px;
-            height: 90px;
-            background: rgba(223,235,255,1);
-            border: 1px solid rgba(119,113,113,1);
-            border-radius: 23px;
-            position: relative;
-        }
-
-        /* 과목 박스 text 1:두줄짜리, 2:한줄짜리 */
+        .box-back2 { background: rgba(196,196,196,1);}
+        .box-back3 { background: rgba(223,235,255,1);}
         .box-text1 {
-            width: 120px;
             color: rgba(0,0,0,1);
-            position: absolute;
-            top: 23px;
-            left: 21px;
             font-family: Gudea;
             font-weight: Regular;
             font-size: 18px;
             text-align: center;
+            line-height: 88px;
         }
         .box-text2 {
-            width: 120px;
             color: rgba(0,0,0,1);
-            position: absolute;
-            top: 35px;
-            left: 21px;
             font-family: Gudea;
             font-weight: Regular;
             font-size: 18px;
             text-align: center;
+            padding: 17px;
+            line-height: 1.5em;
         }
+        
         /* 각자 과목 박스들의 높이 지정 */
-        #cs1,#sw3,#sw4,#l3{top: 580px;}
-        #cs2,#cs3,#sw5,#l4{top: 870px;}
+        #cs1,#sw3,#sw4{top: 580px;}
+        #cs2,#cs3,#sw5{top: 870px;}
         #cs4,#cs5,#sw6,#sw7{top: 1210px;}
-        #cs6,#cs7,#sw8,#l5{top: 1330px;}
-        #cs8,#cs9,#sw10,#sw11,#l6{top: 1730px;}
-        #cs10,#cs11,#sw12,#sw13,#l7{top: 1900px;}
+        #cs6,#cs7,#sw8{top: 1330px;}
+        #cs8,#cs9,#sw10,#sw11{top: 1730px;}
+        #cs10,#cs11,#sw12,#sw13{top: 1900px;}
         #cs12, #cs13 {top: 2020px;}
         #cs14{top: 2220px;}
-        #cs15,#sw14,#l8{top: 2400px;}
+        #cs15,#sw14{top: 2400px;}
         #c1{top: 30px;}
         #c2{top: 200px;}
         #c3{top: 320px;}
@@ -285,16 +258,10 @@
 
         /* 과목 소개 line */
         .lines {
-            border: 3px solid red ;
-            width: 30%;
-            height: 2500px;
-            position: relative;
-            top: 100px;
+            position: absolute;
             left: 50%;
             transform: translateX(-50%);
-        }
-
-       
+        }  
         /* 소개 라인별 구역*/
         .line1 { /* 0-- 모양*/
             width: 210px;
@@ -302,44 +269,41 @@
             position: absolute;
             left: 50%;
             transform: translateY(70%);
-            z-index: 8;
         }
         .line2 { /* --0-- 모양 */
             width: 390px;
             height: 30px;
-            position: absolute;
-            left: center;
-            transform: translateY(70%);
-            z-index: 8;
+            position: absolute; 
         }
+        #l1{ top: 220px;}
+        #l2{top: 510px;}
+        #l3{top: 700px;}
+        #l4{top: 990px;}
+        #l5{top: 1450px;}
+        #l6{top: 1855px;}
+        #l7{top: 2029px;}
+        #l8{top: 2525px;}
 
-        #l1{
-            top: 118px;
-        }
-        #l2{
-            top: 411px;
-        }
-
-        /*라인의 형태가 3가지임 0- & -0- &순으로 1,2*/
         .line-circle01 {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             position: absolute;
             top: 0px;
             left: 0%;
             transform: translateX(-50%);
             border: 8px solid rgba(255,204,99,1);
+            border-radius: 50%;
         }
         .line-circle02 {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             position: absolute;
             top: 0px;
             left: 50%;
             transform: translateX(-50%);
             border: 8px solid rgba(255,204,99,1);
+            border-radius: 50%;
         }
-
         .cs-line02 {
             width: 180px;
             opacity: 1;
@@ -364,12 +328,11 @@
             left: 54%;
             border: 8px solid rgba(200,238,197,1);
         }
-
         .main-line {
         height: 2500px;
         width: 5px;
         position: absolute;
-        top: 100px;
+        top: 200px;
         left: 50%;
         transform: translateX(-50%);
         border: 10px solid rgba(255,229,175,1);
@@ -412,173 +375,126 @@
             
         <!-- 컴과 영역 -->
         <div class="cs-subject">
-                <div class="box box-right" id="cs1"><div class="box-back1"></div>
-                <span class="box-text1">윈도우<br>프로그래밍</span></div>
+                <div class="box box-right box-back1 box-text2" id="cs1">윈도우<br>프로그래밍</div>
 
-                <div class="box box-right" id="cs2"><div class="box-back2"></div>
-                <span class="box-text1">디지털<br>논리회로</span></div>
-                <div class="box box-left" id="cs3"><div class="box-back1"></div>
-                <span class="box-text1">리눅스<br>시스템</span></div>
+                <div class="box box-right box-back2 box-text2" id="cs2">디지털<br>논리회로</div>
+                <div class="box box-left box-back1 box-text2" id="cs3">리눅스<br>시스템</div>
 
-                <div class="box box-right" id="cs4"><div class="box-back2"></div>
-                <span class="box-text1">프로그래밍<br>언어론</span></div>
-                <div class="box box-left" id="cs5"><div class="box-back1"></div>
-                <span class="box-text1">컴퓨터<br>구조</span></div>
-                <div class="box box-right" id="cs6"><div class="box-back1"></div>
-                <span class="box-text1">웹시스템<br>설계</span></div>
-                <div class="box box-left" id="cs7"><div class="box-back1"></div>
-                <span class="box-text1">시스템<br>프로그래밍</span></div>
+                <div class="box box-right box-back2 box-text2" id="cs4">프로그래밍<br>언어론</div>
+                <div class="box box-left box-back1 box-text2" id="cs5">컴퓨터<br>구조</div>
+                <div class="box box-right box-back1 box-text2" id="cs6">웹시스템<br>설계</div>
+                <div class="box box-left box-back1 box-text2" id="cs7">시스템<br>프로그래밍</div>
 
-                <div class="box box-right" id="cs8"><div class="box-back1"></div>
-                <span class="box-text1">컴퓨터<br>네트워크1</span></div>
-                <div class="box box-left" id="cs9"><div class="box-back1"></div>
-                <span class="box-text1">소프트웨어<br>공학</span></div>
+                <div class="box box-right box-back1 box-text2" id="cs8">컴퓨터<br>네트워크1</div>
+                <div class="box box-left box-back1 box-text2" id="cs9">소프트웨어<br>공학</div>
 
-                <div class="box box-right" id="cs10"><div class="box-back1"></div>
-                <span class="box-text2">컴파일러</span></div>
-                <div class="box box-left" id="cs11"><div class="box-back1"></div>
-                <span class="box-text1">데이터베이스<br>프로그래밍</span></div>
-                <div class="box box-right" id="cs12"><div class="box-back1"></div>
-                <span class="box-text1">컴퓨터<br>네트워크2</span></div>
-                <div class="box box-left" id="cs13"><div class="box-back1"></div>
-                <span class="box-text1">임베디드<br>시스템</span></div>
+                <div class="box box-right box-back1 box-text1" id="cs10">컴파일러</div>
+                <div class="box box-left box-back1 box-text2" id="cs11">데이터베이스<br>프로그래밍</div>
+                <div class="box box-right box-back1 box-text2" id="cs12">컴퓨터<br>네트워크2</div>
+                <div class="box box-left box-back1 box-text2" id="cs13">임베디드<br>시스템</div>
 
-                <div class="box box-center" id="cs14"><div class="box-back1"></div>
-                <span class="box-text2">컴퓨터특강</span></div>
+                <div class="box box-center box-back1 box-text1" id="cs14">컴퓨터특강</div>
 
-                <div class="box box-right" id="cs15"><div class="box-back1"></div>
-                <span class="box-text1">영상 정보<br>처리</span></div>
+                <div class="box box-right box-back1 box-text2" id="cs15">영상 정보<br>처리</div>
         </div>
             
         <!-- 공통 과목 영역 -->
         <div class="common-subject">
-                <div class="box box-center" id="c1"><div class="box-back3"></div>
-                <span class="box-text1">컴퓨터과학의 이해</span></div>
-                
-                <!--컴과이에 대한 소개 넣어야댐-->
+                <div class="box box-center box-back3 box-text2" id="c1">컴퓨터과학의 <br> 이해</div>
 
-                <div class="box box-center" id="c2"><div class="box-back1"></div>
-                <span class="box-text1">소프트웨어의<br>이해</span></div>
-                <div class="box box-center" id="c3"><div class="box-back1"></div>
-                <span class="box-text1">프로그래밍<br>개론</span></div>
+                <div class="box box-center box-back1 box-text2" id="c2">소프트웨어의<br>이해</div>
+                <div class="box box-center box-back1 box-text2" id="c3">프로그래밍<br>개론</div>
 
-                <div class="box box-center" id="c4"><div class="box-back1"></div>
-                <span class="box-text2">컴퓨터 수학</span></div>
+                <div class="box box-center box-back1 box-text1" id="c4">컴퓨터 수학</div>
 
-                <div class="box box-center" id="c5"><div class="box-back2"></div>
-                <span class="box-text2">자료구조</span></div>
-                <div class="box box-center" id="c6"><div class="box-back2"></div>
-                <span class="box-text1">데이터<br>사이언스 개론</span></div>
+                <div class="box box-center box-back2 box-text1" id="c5">자료구조</div>
+                <div class="box box-center box-back2 box-text2" id="c6">데이터<br>사이언스 개론</div>
 
-                <div class="box box-center" id="c7"><div class="box-back1"></div>
-                <span class="box-text1">자바<br>프로그래밍</span></div>
-                <div class="box box-center" id="c8"><div class="box-back1"></div>
-                <span class="box-text1">컴퓨터<br>그래픽스</span></div>
+                <div class="box box-center box-back1 box-text2" id="c7">자바<br>프로그래밍</div>
+                <div class="box box-center box-back1 box-text2" id="c8">컴퓨터<br>그래픽스</div>
 
-                <div class="box box-center" id="c9"><div class="box-back2"></div>
-                <span class="box-text2">운영체제</span></div>
+                <div class="box box-center box-back2 box-text1" id="c9">운영체제</div>
 
-                <div class="box box-center" id="c10"><div class="box-back2"></div>
-                <span class="box-text2">알고리즘</span></div>
-                <div class="box box-center" id="c11"><div class="box-back1"></div>
-                <span class="box-text1">데이터<br>베이스와 설계</span></div>
-                <div class="box box-center" id="c12"><div class="box-back1"></div>
-                <span class="box-text1">모바일<br>소프트웨어</span></div>
+                <div class="box box-center box-back2 box-text1" id="c10">알고리즘</div>
+                <div class="box box-center box-back1 box-text2" id="c11">데이터<br>베이스와 설계</div>
+                <div class="box box-center box-back1 box-text2" id="c12">모바일<br>소프트웨어</div>
 
-                <div class="box box-center" id="c13"><div class="box-back1"></div>
-                <span class="box-text2">인공지능</span></div>
+                <div class="box box-center box-back1 box-text1" id="c13">인공지능</div>
 
-                <div class="box box-center" id="c14"><div class="box-back1"></div>
-                <span class="box-text1">시스템 종합<br>설계</span></div>
+                <div class="box box-center box-back1 box-text2" id="c14">시스템 종합<br>설계</div>
 
-                <div class="box box-center" id="c15"><div class="box-back1"></div>
-                <span class="box-text1">네트워크<br>보안</span></div>
-                <div class="box box-center" id="c16"><div class="box-back1"></div>
-                <span class="box-text1">클라우드<br>시스템</span></div>
+                <div class="box box-center box-back1 box-text2" id="c15">네트워크<br>보안</div>
+                <div class="box box-center box-back1 box-text2" id="c16">클라우드<br>시스템</div>
         </div>
         
         <!-- 소웨과목 영역 -->
         <div class="sw-subject">
-                <div class="box box-left" id="sw1"><div class="box-back1"></div>
-                <span class="box-text1">소프트웨어<br>진로 탐색</span></div>
+                <div class="box box-left box-back1 box-text2" id="sw1">소프트웨어<br>진로 탐색</div>
 
-                <div class="box box-left" id="sw2"><div class="box-back3"></div>
-                <span class="box-text2">통계학 입문</span></div>
+                <div class="box box-left box-back3 box-text1" id="sw2">통계학 입문</div>
                 
-                <div class="box box-left" id="sw3"><div class="box-back1"></div>
-                <span class="box-text1">경영 정보<br>시스템</span></div>
-                <div class="box box-right" id="sw4"><div class="box-back1"></div>
-                <span class="box-text1">인터넷 기술<br>융합</span></div>
+                <div class="box box-left box-back1 box-text2" id="sw3">경영 정보<br>시스템</div>
+                <div class="box box-right box-back1 box-text2" id="sw4">인터넷 기술<br>융합</div>
 
-                <div class="box box-left" id="sw5"><div class="box-back2"></div>
-                <span class="box-text1">컴퓨터 시스템<br>기초</span></div>
+                <div class="box box-left box-back2 box-text2" id="sw5">컴퓨터 시스템<br>기초</div>
 
-                <div class="box box-left" id="sw6"><div class="box-back1"></div>
-                <span class="box-text1">데이터 마이닝<br>분석</span></div>
-                <div class="box box-right" id="sw7"><div class="box-back1"></div>
-                <span class="box-text1">소프트웨어<br>분석 및 설계</span></div>
-                <div class="box box-left" id="sw8"><div class="box-back1"></div>
-                <span class="box-text1">사용자<br>인터페이스</span></div>
+                <div class="box box-left box-back1 box-text2" id="sw6">데이터 마이닝<br>분석</div>
+                <div class="box box-right box-back1 box-text2" id="sw7">소프트웨어<br>분석 및 설계</div>
+                <div class="box box-left box-back1 box-text2" id="sw8">사용자<br>인터페이스</div>
 
-                <div class="box box-left" id="sw9"><div class="box-back1"></div>
-                <span class="box-text2">스토리지</span></div>
-                <div class="box box-left" id="sw10"><div class="box-back1"></div>
-                <span class="box-text2">빅데이터</span></div>
-                <div class="box box-right" id="sw11"><div class="box-back1"></div>
-                <span class="box-text1">인터렉티브<br>미디어</span></div>
+                <div class="box box-left box-back1 box-text1" id="sw9">스토리지</div>
+                <div class="box box-left box-back1 box-text1" id="sw10">빅데이터</div>
+                <div class="box box-right box-back1 box-text2" id="sw11">인터렉티브<br>미디어</div>
 
-                <div class="box box-left" id="sw12"><div class="box-back1"></div>
-                <span class="box-text1">바이오<br>인포메틱스 개론</span></div>
-                <div class="box box-right" id="sw13"><div class="box-back1"></div>
-                <span class="box-text2">소융특강</span></div>
+                <div class="box box-left box-back1 box-text2" id="sw12">바이오<br>인포메틱스 개론</div>
+                <div class="box box-right box-back1 box-text1" id="sw13">소융특강</div>
 
-                <div class="box box-left" id="sw14"><div class="box-back1"></div>
-                <span class="box-text1">사물인터넷<br>시스템</span></div>
+                <div class="box box-left box-back1 box-text2" id="sw14">사물인터넷<br>시스템</div>
         </div>
 
       
 
-        <div class="lines">
-            <div class="line1" id="l1">
+        
+            <div class="lines line1" id="l1">
                 <div class="line-circle01"></div>
                 <div class="sw-line01"></div>
             </div>
-            <div class="line1" id="l2">
+            <div class="lines line1" id="l2">
                 <div class="line-circle01"></div>
                 <div class="sw-line01"></div>
             </div>
-            <div class="line2" id="l3">
+            <div class="lines line2" id="l3">
                 <div class="line-circle02"></div>
                 <div class="sw-line02"></div>
                 <div class="cs-line02"></div>
             </div>
-            <div class="line2" id="l4">
+            <div class="lines line2" id="l4">
                 <div class="line-circle02"></div>
                 <div class="sw-line02"></div>
                 <div class="cs-line02"></div>
             </div>
-            <div class="line2" id="l5">
+            <div class="lines line2" id="l5">
                 <div class="line-circle02"></div>
                 <div class="sw-line02"></div>
                 <div class="cs-line02"></div>
             </div>
-            <div class="line2" id="l6">
+            <div class="lines line2" id="l6">
                 <div class="line-circle02"></div>
                 <div class="sw-line02"></div>
                 <div class="cs-line02"></div>
             </div>
-            <div class="line2" id="l7">
+            <div class="lines line2" id="l7">
                 <div class="line-circle02"></div>
                 <div class="sw-line02"></div>
                 <div class="cs-line02"></div>
             </div>
-            <div class="line2" id="l8">
+            <div class="lines line2" id="l8">
                 <div class="line-circle02"></div>
                 <div class="sw-line02"></div>
                 <div class="cs-line02"></div>
             </div> 
-            <div class="main-line"></div>  
-        </div>
+            <div class="lines main-line"></div>  
+        
     </div>
 
     <script>
