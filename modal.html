@@ -9,8 +9,16 @@
         * {
         box-sizing: border-box;
         }
+        
         .modal_chang{
-            position: relaive;
+            display: flex;
+            position: absolute;
+        }
+
+        .modal_overlay{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(189, 189, 189, 0.434);
         }
 
         #modal_bar{
@@ -42,51 +50,44 @@
         background-position: center center;
         background-size: cover;*/
         }
+        .button{
+            width: 13px;
+            height: 13px;
+            opacity: 1;
+            position: absolute;
+            top: 0px;
+            border-radius: 50%;
+        }
         .red {
-        width: 13px;
-        height: 13px;
-        background: rgba(246,73,73,1);
-        opacity: 1;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        border-radius: 50%;
+            left: 0px;
+            background: rgba(246,73,73,1);
         }
         .yellow {
-        width: 13px;
-        height: 13px;
-        background: rgba(255,174,27,1);
-        opacity: 1;
-        position: absolute;
-        top: 0px;
-        left: 26px;
-        border-radius: 50%;
+            left: 26px;
+            background: rgba(255,174,27,1); 
         }
         .green {
-        width: 13px;
-        height: 13px;
-        background: rgba(36,159,69,1);
-        opacity: 1;
-        position: absolute;
-        top: 0px;
-        left: 53px;
-        border-radius: 50%;
+            left: 53px;
+            background: rgba(36,159,69,1);
         }
-
     </style>
 </head>
+
 <body>
+    
     <div class="modal_chang">
         <div class="modal_overlay"></div>
-        <div id="modal_bar">
-            <div id="modal_buttons">
-                <div class="red"></div>
-                <div class="yellow"></div>
-                <div class="green"></div>
+        <div class="modal">
+            <div id="modal_bar">
+                <div id="modal_buttons">
+                    <div class="button red"></div>
+                    <div class="button yellow"></div>
+                    <div class="button green"></div>
+                </div>
             </div>
-        </div>
-        <div id="content">
-            <!-- 과목 소개 내용 들어갈 곳-->
+            <div id="content">
+                <!-- 과목 소개 내용 들어갈 곳-->
+            </div>
         </div>
     </div>
 </body>
