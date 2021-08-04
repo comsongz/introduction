@@ -373,6 +373,8 @@
             top: 55px;
             left: 0px;
             border: 2px solid #f1f2f5; /*1pt는 어떤지*/
+            padding: 10px;
+            text-align: center;
         }
         #modal_buttons { 
         width: 66px;
@@ -582,23 +584,30 @@
         // 모달 정가운데 위치 + 텍스트 추가
         const modal_chang = document.querySelector(".modal_chang")
         const content = document.getElementById("content")
+        
          
         // cs1 -> c1 -> sw1 순으로 배열 만들면 됨
-        function popModal(i) {
-            modal_chang.style.display = "flex"
-            content.innerHTML = "추가할 내용"
+        function popModal() {
+            //if (i in explain){ 
+                content.innerHTML = explain["cs3"];
+                modal_chang.style.display = "flex";
+            //}    
         }
 
         function closeModal() {
-            modal_chang.style.display = "none"
+            modal_chang.style.display = "none";
         }
 
-        const modals = document.querySelectorAll(".box")
-        const closebtn = document.getElementById("modal_buttons")
-        
-        var i=0
-        explain = []
-
+        const modals = document.querySelectorAll(".box");
+        const closebtn = document.getElementById("modal_buttons");
+       
+        explain = {
+            "cs1" : "<br> 본격적인 프로그래밍 교과목 수강 전 <br> 소프트웨어의 개념을 이해하고 프로그래밍 기초 개념과 <br> 원리를 쉽게 학습하는 내용 python을 배움. <br><br> ================================ <br><br>  정보시스템과 소프트웨어/ 알고리즘과 순서도/ <br> 변수와 수식/ 입출력과 GUI/ 판단과 선택/ 반복/ <br> 그래픽기초/ 리스트와 사전/ 함수/ 객체/ <br> 그래픽스 응용/ 애니메이션게임 ", 
+            "cs2" : "",
+            "cs3" : "<br> C프로그래밍 언어를 배우며, <br> visual studio의 사용법과 프로그램의 실행등을 다룸 <br><br> ================================ <br><br> C언어/ 재귀호출/ 알고리즘 분석/ <br> 선형구조 (배열, 스택, 큐)/ 탐색/ 정렬/ <br> 비선형구조(트리, 그래프)/ shortest path finding",
+            "cs4" : "",
+            "cs5" : "",        
+        } 
         modals.forEach(function(box){
             box.addEventListener('click', popModal); /*mouseover 이벤트*/
             closebtn.addEventListener('click', closeModal);
