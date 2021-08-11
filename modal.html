@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+        
+        .modal_chang{
+            display: flex;
+            position: absolute;
+        }
+
+        .modal_overlay{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(189, 189, 189, 0.434);
+        }
+
+        #modal_bar{
+            width: 390px;
+            height: 55px;
+            background-color: #f1f2f5;
+            border-radius: 10px 10px 0px 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #content{
+            width: 390px;
+            height: 250px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 55px;
+            left: 0px;
+            border: 2px solid #f1f2f5; /*1pt는 어떤지*/
+        }
+        #modal_buttons { 
+        width: 66px;
+        height: 13px;
+        opacity: 1;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        /*background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;*/
+        }
+        .button{
+            width: 13px;
+            height: 13px;
+            opacity: 1;
+            position: absolute;
+            top: 0px;
+            border-radius: 50%;
+        }
+        .red {
+            left: 0px;
+            background: rgba(246,73,73,1);
+        }
+        .yellow {
+            left: 26px;
+            background: rgba(255,174,27,1); 
+        }
+        .green {
+            left: 53px;
+            background: rgba(36,159,69,1);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="modal_chang">
+        <div class="modal_overlay"></div>
+        <div class="modal">
+            <div id="modal_bar">
+                <div id="modal_buttons">
+                    <div class="button red"></div>
+                    <div class="button yellow"></div>
+                    <div class="button green"></div>
+                </div>
+            </div>
+            <div id="content">
+                <!-- 과목 소개 내용 들어갈 곳-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
