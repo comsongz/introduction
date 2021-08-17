@@ -6,8 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Gudea&display=swap" rel="stylesheet" />
     <style>
+        @font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EliceDigitalBaeum_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LAB디지털';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+     font-family: 'DungGeunMo';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
         *{
             box-sizing: border-box;
+            font-family: 'DungGeunMo';
         }
 
         body {
@@ -15,6 +47,7 @@
             position: relative;
             top: 80px;
             left: 0px;
+            
         }
 
         header{
@@ -178,12 +211,16 @@
          /* 과목 박스 */
         .box {
             width: 160px;
-            height: 90px;
+            height: 60px;
             z-index: 0;
-            border: 1px solid rgba(119,113,113,1);
+            box-shadow: 5px 5px 5px rgba(199, 199, 199, 0.632);
             border-radius: 23px;
             position: absolute;
             z-index: -1;
+            font-family: 'EliceDigitalBaeum_Bold';
+        }
+        .box:hover{
+            box-shadow: 3px 3px 5px rgba(206, 206, 206, 0.605) inset;
         }
         .box-center{
             position: absolute;
@@ -200,61 +237,52 @@
             left: 75%;
             transform: translateX(-50%);
         }
-        .box-back1 {
-        background: rgba(250,250,250,1);
-        /*top: 0px;
-        left: 0px; 왠지 그림자 넣으니까 촌스러움
-        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);*/
-        }       
-        .box-back2 { background: rgba(196,196,196,1);}
-        .box-back3 { background: rgba(223,235,255,1);}
+        .box-back1 {background: rgba(250,250,250,1); color: black;}       
+        .box-back2 { background: rgb(255, 255, 255); color: rgb(68, 68, 123);}
+        .box-back3 { background: rgb(255, 255, 255); color: rgb(135, 135, 135);}
         .box-text1 {
-            color: rgba(0,0,0,1);
-            font-family: Gudea;
-            font-weight: Regular;
-            font-size: 18px;
+            font-size: 15px;
             text-align: center;
-            line-height: 88px;
+            padding-top: 22px;
+            font-family: 'S-CoreDream-3Light';
         }
         .box-text2 {
-            color: rgba(0,0,0,1);
-            font-family: Gudea;
-            font-weight: Regular;
-            font-size: 18px;
+            font-size: 15px;
             text-align: center;
-            padding: 17px;
+            padding-top: 8px;
             line-height: 1.5em;
+            font-family: 'S-CoreDream-3Light';
         }
         
         /* 각자 과목 박스들의 높이 지정 */
-        #cs1,#sw3,#sw4{top: 580px;}
-        #cs2,#cs3,#sw5{top: 870px;}
-        #cs4,#cs5,#sw6,#sw7{top: 1210px;}
-        #cs6,#cs7,#sw8{top: 1330px;}
-        #cs8,#cs9,#sw10,#sw11{top: 1730px;}
-        #cs10,#cs11,#sw12,#sw13{top: 1900px;}
-        #cs12, #cs13 {top: 2020px;}
-        #cs14{top: 2220px;}
-        #cs15,#sw14{top: 2400px;}
+        #cs1,#sw3,#sw4{top: 630px;}
+        #cs2,#cs3,#sw5{top: 950px;}
+        #cs4,#cs5,#sw6,#sw7{top: 1270px;}
+        #cs6,#cs7,#sw8{top: 1350px;}
+        #cs8,#cs9,#sw10,#sw11{top: 1550px;}
+        #cs10,#cs11,#sw12,#sw13{top: 1970px;}
+        #cs12, #cs13 {top: 2050px;}
+        #cs14{top: 2450px;}
+        #cs15,#sw14{top: 2220px;}
         #c1{top: 30px;}
-        #c2{top: 200px;}
-        #c3{top: 320px;}
+        #c2{top: 130px;}
+        #c3{top: 280px;}
         #c4{top: 490px;}
-        #c5{top: 660px;}
-        #c6{top: 780px;}
-        #c7{top: 950px;}
-        #c8{top: 1070px;}
-        #c9{top: 1240px;}
-        #c10{top: 1410px;}
-        #c11{top: 1530px;}
-        #c12{top: 1650px;}
-        #c13{top: 1820px;}
-        #c14{top: 1990px;}
-        #c15{top: 2160px;}
-        #c16{top: 2280px;}
-        #sw1{top: 110px;}
-        #sw2{top: 410px;}
-        #sw9{top: 1610px}
+        #c5{top: 710px;}
+        #c6{top: 810px;}
+        #c7{top: 1030px;}
+        #c8{top: 1130px;}
+        #c9{top: 1400px;}
+        #c10{top: 1650px;}
+        #c11{top: 1740px;}
+        #c12{top: 1830px;}
+        #c13{top: 2080px;}
+        #c14{top: 2300px;}
+        #c15{top: 2400px;}
+        #c16{top: 2520px;}
+        #sw1{top: 200px;}
+        #sw2{top: 390px;}
+        #sw9{top: 1630px}
 
         /* 과목 소개 line */
         .lines {
@@ -262,15 +290,33 @@
             left: 50%;
             transform: translateX(-50%);
         }  
-        .main-line {
-        height: 2500px;
-        width: 5px;
-        position: absolute;
-        top: 200px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 10px solid rgba(255,229,175,1);
+
+        .lineDown {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0px;
+            height: 0px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
         }
+        .l_1{top: 200px; height: 270px; border: 20px solid #f7d065;}
+        .ld1{top: 470px; border-top: 20px solid #f9cd55;}
+        .l_2{top: 490px; height: 200px; border: 20px solid #ffcc41;}
+        .ld2{top: 690px; border-top: 20px solid #ffcc41;}
+        .l_3{top: 710px; height: 300px; border: 20px solid rgb(163, 232, 194);}
+        .ld3{top: 1010px; border-top: 20px solid rgb(163, 232, 194);}
+        .l_4{top: 1030px; height: 300px; border: 20px solid rgb(123, 212, 173);}
+        .ld4{top: 1330px; border-top: 20px solid rgb(123, 212, 173);}
+        .l_5{top: 1350px; height: 250px; border: 20px solid #97ceee;}
+        .ld5{top: 1600px; border-top: 20px solid #97ceee;}
+        .l_6{top: 1620px; height: 400px; border: 20px solid #63BFF3;}
+        .ld6{top: 2020px; border-top: 20px solid #63BFF3;}
+        .l_7{top: 2040px; height: 250px; border: 20px solid #6e82cb;}
+        .ld7{top: 2290px; border-top: 20px solid #6e82cb;}
+        .l_8{top: 2310px; height: 400px; border: 20px solid #445CB4;}
+        .ld8{top: 2710px; border-top: 20px solid #445CB4;}
+        
         /* 소개 라인별 구역*/
         .line1 { /* 0-- 모양*/
             width: 210px;
@@ -284,32 +330,33 @@
             height: 30px;
             position: absolute; 
         }
-        #l1{ top: 220px;}
-        #l2{top: 510px;}
-        #l3{top: 700px;}
-        #l4{top: 990px;}
-        #l5{top: 1450px;}
-        #l6{top: 1855px;}
-        #l7{top: 2029px;}
-        #l8{top: 2525px;}
+        #l1{top: 300px;}
+        #l2{top: 500px;}
+        #l3{top: 750px;}
+        #l4{top: 1070px;}
+        #l5{top: 1390px;}
+        #l6{top: 1670px;}
+        #l7{top: 2080px;}
+        #l8{top: 2340px;}
+
         .line-circle01 {
-            width: 35px;
-            height: 35px;
+            width: 20px;
+            height: 20px;
             position: absolute;
             top: 0px;
             left: 0%;
             transform: translateX(-50%);
-            border: 8px solid rgba(255,204,99,1);
+            border: 1px solid rgba(113, 113, 113, 0.968);
             border-radius: 50%;
         }
         .line-circle02 {
-            width: 35px;
-            height: 35px;
+            width: 20px;
+            height: 20px;
             position: absolute;
             top: 0px;
             left: 50%;
             transform: translateX(-50%);
-            border: 8px solid rgba(255,204,99,1);
+            border: 1px solid rgba(113, 113, 113, 0.968);
             border-radius: 50%;
         }
         .cs-line02 {
@@ -318,7 +365,7 @@
             position: absolute;
             top: 9px;
             left: 0%;
-            border: 8px solid #FFC0BD;
+            border: 1px solid rgba(113, 113, 113, 0.4);
         }
         .sw-line01 {
             width: 180px;
@@ -326,7 +373,7 @@
             position: absolute;
             top: 9px;
             left: 7%;
-            border: 8px solid rgba(200,238,197,1);
+            border: 1px solid rgba(113, 113, 113, 0.4);
         }
         .sw-line02 {
             width: 180px;
@@ -334,30 +381,27 @@
             position: absolute;
             top: 9px;
             left: 54%;
-            border: 8px solid rgba(200,238,197,1);
+            border: 1px solid rgba(113, 113, 113, 0.4);
         }
 
         /* 모달창 관련 */
         .modal_chang{
             display: none;
             position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(189, 189, 189, 0.434);
-            z-index: 1;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(189, 189, 189, 0.324);
+            z-index: 1000;
         }
-
         .modal{
             position: absolute;
-            left: 30%;
-            top: 350px; /*좌표 조정할것*/
-            transform: translateX(-50%);
-            z-index: -1;
-
+            margin: auto;
+            left: 37%;
+            top: 30%;
         }
 
-        #modal_bar{
-            width: 390px;
+        .modal_bar{
+            width: 350px;
             height: 55px;
             background-color: #f1f2f5;
             border-radius: 10px 10px 0px 0px;
@@ -366,7 +410,7 @@
             left: 0px;
         }
         .contents{
-            width: 390px;
+            width: 350px;
             height: 250px;
             background-color: #ffffff;
             position: absolute;
@@ -376,7 +420,7 @@
             padding: 10px;
             text-align: center;
         }
-        #modal_buttons { 
+        .modal_buttons { 
         width: 66px;
         height: 13px;
         opacity: 1;
@@ -438,90 +482,382 @@
         <div class="ham" id="ham_4"></div>
     </div>
 
+    <div class="modal_chang" id="mcs1"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            C++ 의 개념적인 부분도 다루면서 코드 작성법을 배울 수 있는 과목으로 windows 환경에서 visual programming을 한다. 또한 MFC Programming도 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mcs2"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            컴퓨터 시스템을 구성하는 가장 기본적인 회로와 이러한 회로의 구성 원리에 대해 학습한 후 기본 동작 회로의 설계를 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mcs3"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            리눅스 운영체제에서의 터미널 명령어 등 기본적인 개념을 배우며 파일 및 프로세스를 중심으로 파일의 기본 개념 및 사용법, 파일 구조, 파일 입출력, 프로세스 등도 학습한다
+        </div>
+   </div></div>
+   <div class="modal_chang" id="mcs4"><div class="modal">
+    <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+    <div class="contents">
+        프로그래밍 언어의 종류와 구문법과 설계 방법을 배운다. 이를 통해 프로그래밍 언어에 대한 체계적인 이해 및 응용 능력 향상을 목표로 한다.
+    </div>
+    </div></div>
+    <div class="modal_chang" id="mcs5"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            디지털 논리 회로가 선수강 과목이며 실제로 컴퓨터가 어떻게 구성되어 있고, 어떻게 설계하는지를 심층적으로 학습한다. 이를 위해 정보의 표현, 각 단위 장치들의 논리 회로, 제어장치 및 입출력 장치, 기억장치들의 구성을 학습한다
+        </div>
+   </div></div>
+   <div class="modal_chang" id="mcs6"><div class="modal">
+    <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+    <div class="contents">
+        소프트웨어의 이해, 프로그래밍 개론이 선수강과목이며 HTML과 CSS, js, jsp, mysql을 한 번에 배울 수 있는 과목으로 프로젝트도 진행한다.
+    </div>
+    </div></div>
+    <div class="modal_chang" id="mcs7"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            리눅스를 통해 소프트웨어의 기본 체계를 이해하고, 시스템 소프트웨어 활용 능력을 키울 수 있으며 리눅스 시스템 수업의 심화버전이라고 할 수 있다. 최종적으로 쉘인터프리터를 만드는 수업 리눅스 시스템을 중심으로 파일 및 입출력, 프로세스, 예외처리, 프로세스 간의 통신 등을 이용한 문제 해결에 대해 학습한다. 
+        </div>
+   </div></div>
+   <div class="modal_chang" id="mcs8"><div class="modal">
+    <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+    <div class="contents">
+        컴퓨터 네트워크에 대한 핵심 개념과 다양한 네트워크 기술을 배우고, 최상위 응용 계층부터 물리계층까지 컴퓨터 네트워크를 구성하는 각 계층(OSI 7계층)에 대해 학습한다.
+    </div>
+    </div></div>
+   <div class="modal_chang" id="mcs9"><div class="modal">
+    <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+    <div class="contents">
+        대형 자료 처리 소프트웨어 시스템 개발과 유지 관리에 따른 복잡한 공정 상의 문제를 해결하기 위한 여러 방법을 공학적인 측면에서 연구하며 팀플이 있다. 
+    </div>
+    </div></div>
+    <div class="modal_chang" id="mcs10"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            컴파일러 모델들을 비교하고, 컴파일러를 이루는 scanner, parser, type checker, source translator, code generator를 이해하고, 간단한 컴파일러를 만들어 본다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mcs11"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            실제 산업계에서 필요한 데이터 베이스 프로그래밍 기술을 습득할 수 있는 과목으로 데이터 베이스 이론과 프로그래밍 기술을 이용한 데이터 베이스 활용 기법을 습득한 후 실전 프로젝트를 통해서 활용 기법을 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mcs12"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            컴퓨터 네트워크1이 선수강 과목으로 OSI 7계층의 하위 계층인 네트워크 계층과 데이터 링크 계층, 물리 계층에 대해 학습하고, 네트워크와 멀티미디어 통신에 대해 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mcs13"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            하드웨어 디자인, CPU 구조와 하드웨어와 소프트웨어의 임베디드 시스템을 학습한다. verilog HDL를 배워 임베디드 하드웨어과 소프트웨어를 디자인하며 FPGA 실습이 있다.
+        </div>
+   </div></div>
+    <div class="modal_chang" id="mcs14"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            전산학의 최신 주제의 연구 분야 중 교과목에서 다루지 않는 주제들을 배운다. 현대 컴퓨터 시스템의 메모리와 SoC를 기본으로 한 CPU를 배우고, 메모리 구조, 캐시 메모리, CPU의 구조를 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mcs15"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            디저털 영상처리 이론을 습득하고, c프로그래밍을 이용한 영상처리 알고리즘을 구현하는 능력을 키운다. Visual C++과 OpenCV로 디지털 영상처리를 학습한다.
+        </div>
+   </div></div>
+
+   <!-- 공통 -->
+   <div class="modal_chang" id="mc1"><div class="modal">
+    <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+    <div class="contents">
+        컴퓨터 과학을 처음 접하는 학생 대상으로 컴퓨터에 대한 일반적인 기본 개념을 배움컴퓨터의 HW/SW등 기본개념, 새로운 기술 동향등을 배운다.
+    </div>
+    </div></div>
+    <div class="modal_chang" id="mc2"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            <br> C프로그래밍 언어를 배우며, <br> visual studio의 사용법과 프로그램의 실행등을 학습한다. 
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc3"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            <br> 본격적인 프로그래밍 교과목 수강 전 <br> 소프트웨어의 개념을 이해하고 프로그래밍 기초 개념과 <br> 원리를 쉽게 학습하는 내용으로 python을 배운다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc4"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            컴퓨터 과학의 기본 개념들의 기초가 되는 수학적 개념들인 집합론, 그래프, 트리, 순열, 행렬, 재귀관계, 부울대수 등을 학습한다
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc5"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            자료의 표현, 처리, 탐색, 정렬에 대한 개념과 알고리즘을 배우는 과목으로 선형구조, 탐색, 정렬, 비선형구조 등을 C언어로 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc6"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            데이터사이언스란 무엇인지, 데이터 분석에 필요한 기초 개념, 지식등을 배우며 데이터 사이언스 핵심기술인 데이터 모델링, 데이터 마이닝, 머신러닝 등에 대한 기초 개념을 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc7"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            실습강의이며 응용 소프트웨어 개발에 적합한 언어 및 개발 환경의 습득과 소프트웨어 개발 훈련이 목표이며 객체지향 프로그래밍 언어인 Java를 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc8"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            컴퓨터 그래픽스의 기본원리와 2차원, 3차원, 기하물체의 표현, 변환, 레지스터변환, 조명효과등을 배우며 openGL 라이브러리학습과 제작도구인 unity3D를 사용한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc9"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            운영체제 분야와 관련된 여러 이론을 소개하며 운영체제 설계시 고려할 문제와 그에 대한 해결책 이해를 목표로 한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc10"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            여러가지 필수 알고리즘들의 기본 개념을 배우고 JAVA나 C++을 이용해 이들을 응용한 프로그램들을 설계하면서 시간복잡도를 계산하는 방법을 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc11"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            데이터베이스와 데이터베이스 시스템에 대한 기초적 이론을 배우고 데이터베이스 설계의 요구사항분석과 논리적 설계, 대표적 모델링 기법인 ER 모델링과 대표적 질의어인 SQL를 배우며 시스템 기본 개념과 정규화 모델링 이론을 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc12"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            모바일 컴퓨팅에 대한 기본 개념과 원리를 배우며 안드로이드 프로그래밍 실습을 통해 프로그램을 기획, 설계, 개발하는 지식을 습득한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc13"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            인공지능의 기본 개념을 이해하고 경험을 기초로한 문제해결법과 기계학습 데이터마이닝(WEKA) 신경회로망(ANN,CNN.RNN)등의 데이터기반 기법등을 학습한다. 
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc14"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            컴퓨터 네트워크에서 사용되고 있는 보안기술과 암호화 인증기법과 프로토콜 메세지 인증, 키분배와 사용자 인증, 악성소프트웨어등에 관해 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc15"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            클라우드 시스템 기술과 컴퓨팅 패러다임에 대해 학습하며 이를 바탕으로 한 분산 시스템 설계 및 관리기법에 대한 내용과 최신기술 동향을 학습한다., 미니프로젝트도 존재한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="mc16"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            학과에서 습득한 기초설계, 심화설계 능력을 기반으로 종합설계 능력을 향상시키기 위한 방법으로 중대형 규모의 소프트웨어 설계 능력의 향상을 목표 3-4명의 팀작업 수행한다.
+        </div>
+    </div></div>
+
+    <!-- SW -->
+    <div class="modal_chang" id="msw1"><div class="modal">
+    <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+    <div class="contents">
+        교과목과 전공에 대한 소개, 소프트웨어 분야에 대한 진로 탐색이 학기 초반부에 이루어지며, 여러 분야에 종사하는 실무자, 동문 선배, 학과 교수진들을 초청해 총 여섯번의 강연을 진행하며, 선배를 방문하거나, 전시회를 방문해보는 등의 일정도 진행한다.
+    </div>
+    </div></div>
+    <div class="modal_chang" id="msw2"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            빅데이터 혹은 데이터 사이언스에 관심이 있는 학생들이 데이터 통계에 대해 가볍게 접해보고 싶을 때 수강해보기 좋으며, 통계학을 처음 접하는 학생들을 위한 과목. 통계학의 기초지식부터, 확률이론, 통계적추론방법을 두루 다룬다. 또한 인문사회분야에서도 널리 사용되는 분산 분석, 회귀분석, 범주형자료분석에 대해 공부한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw3"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            경영정보 시스템의 개요를 시작으로 우선적으로 컴퓨터와 데이터 관리 및 데이터베이스를 배운다. 이후 본격적으로 정보시스템 구축하고 도입하는 방법, 정보통신과 인터넷 전자상거래와 e-비즈니스에 대해 배우며, 의사결정지원시스템과 지능정보 시스템과 같이 경영의사결정문제를 해결하기 위한 정보기술과 경영정보 시스템의 전략적 활용 및 관리 방안을 종합적으로 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw4"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            4차 산업혁명 시대 도래에 따른 융합 기술을 기반으로 하는 초연결 사회를 이해하기 위해 학습한다. 컴퓨터의 구조와 멀티미디어, 운영체제, 컴퓨팅 사고, 네트워크, 이동통신 기술, 인터넷 서비스 등 다양한 컴퓨팅 기술들을 실습과 함께 학습하며, 운영체제와, 인공지능 분야는 유망한 분야인 만큼 전문가들을 초청해 수업을 진행한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw5"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            컴퓨터 시스템의 구조에 관한 제반의 사항들을 이해하기 위해 우선 회로 설계의 입문을 학습한다. 또한 진법체계를 배우고 이 로직의 구현과정을 배우고, 이를 사용한 컴퓨터 기본 동작 회로를 설계할 수 있는 능력을 키운다. 나아가 프로그램이 컴퓨터 상에서 어떻게 실행되는지를 구조적인 관점에서 이해할 수 있도록 한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw6"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            데이터로부터 숨겨진 패턴이나 지식을 탐색하는 기술인 데이터 마이닝의 여러 이론 및 알고리즘들을 공부한다. 데이터 마이닝의 대표적인 문제인 분류, 탐색, 군집화, 이상 탐지에 사용되는 알고리즘과 기술을 학습하고 직접 구현한다. 파이썬 또는 자바를 사용해서 데이터마이닝 알고리즘을 구현하는 실습 과제가 있다
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw7"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            소프트웨어 개발에 있어 대상 시스템을 제대로 이해하고 분석해 이를 바탕으로 소프트웨어를 설계하는 것은 매우 중요한 단계이다. 이에 소프트웨어 개발과정을 이해하기위해 요구분석과 문서화, 구조적 분석 방법론에 대해 배우고, 자료흐름도, 자료사전과 소단위 명세서를 직접 작성해본다. 이후 구조적 설계방법과 객체지향 방법론, UML 모델링, 객체지향 설계에 대해 배운다. 팀프로젝트가 있으며, 총 3번의 보고서를 제출한다.  
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw8"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            사람과 원리와 기법에 대해 배우며, 배운 것을 기반으로 상용화 된 VR/AR의 동작 원리를 이해하고 발표하며, 스마트폰을 사용해 AR 그래픽을 구현하고, GPU를 사용컴퓨터의 상호작용을 가능하게 해주는 도구로 사람과 컴퓨터의 상호작용, 상호작용에 이용되는 해 딥러닝 기초이론을 이용한 UI구현 기초를 배운다. 텐서플로우, 유니티 사용한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw9"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            우리나라가 세계적으로 강세를 보이는 비휘발성 메모리와 이에 대항하기 위해 인텔이 개발한 3D Xpoint는 스토리지 시스템 분야의 중요한 쟁점이다. 이에 이런 스토리지의 주된 매체인 NVM 기반의 SSD와 HDD 뿐만 아니라 스토리지 시스템 자체를 구성하는 기술과 구조를 다룸으로써 스토리지 시스템 전반에 대한 이해를 할 수 있도록 한다. 실습은 없으나 과제물 제출이 있을 수 있다.  
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw10"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            대용량, 초고속, 다양성 등의 특징을 가지는 빅데이터를 처리하기 위한 개념, 이론, 기법, 플랫폼 등을 학습함. 빅데이터의 저장을 위한 분산 저장 시스템, 검색을 위한 NoSQL DB, 처리를 위한 MapReduce 등의 프로그래밍 기법을 살펴보고, 빅데이터 처리를 위한 플랫폼인 Hadoop, Spark 등을 학습한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw11"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            가상현실 또는 게임 형식 컨텐츠에 관련된 이론과 개발 기법과 소프트웨어의 활용법을 배운다. 3D 그래픽스 이론, 가상공간 모델링, 애니메이션 및 게임 제작 기법, 스크립팅 언어 등을 학습하며 프로젝트 수행을 통하여 자신이 직접 컨텐츠를 설계하고 구현한다.unity를 사용해 3D 그래픽스 기초를 배우고 C#프로그래밍 기초를 학습하며, 물리엔진, 스크립팅, 사운드처리, ui 컴포넌트에 배운다. 실습과제가 있으며, 프로젝트를 완성해 발표해야한다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw12"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            빅데이터인 생명정보 데이터를 분석하기 위해, 컴퓨터 과학에서 널리 쓰이는 알고리즘들에 생명정보 빅데이터를 적용하는 방법들에 대해 다루며, 서열정렬, 패턴 마이닝, 동적 프로그래밍 등의 알고리즘에 대한 기본 개념들과 머신 러닝에 기반한 최신 생명정보 빅데이터 분석 방법들을 습득한다.   
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw13"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            컴퓨터 과학 분야의 논리적 사고와 효율적인 표현을 위한 방법론을 다룬다. 이 과정에서 다루는 주요 토픽에는 학습, 교육, 테스트 및 평가, 생성 및 프레젠테이션 논리가 포함된다.질의응답과 발표가 있는 수업이며 원격 수업시 영상자료를 제작해야할 수도 있다.
+        </div>
+    </div></div>
+    <div class="modal_chang" id="msw14"><div class="modal">
+        <div class="modal_bar"> <div class="modal_buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div></div>
+        <div class="contents">
+            예제를 통해 사물인터넷을 실제로 이해하기 위한 이론과 방법론을 다루며, 임베디드 컴퓨팅 장치기술이 포함된다. 사물인터넷을 위한 통신기술과 인터넷/컴퓨터 네트워크 기술을 다룬다. 또한 앞서 다룬 기술에 대한 많은 토픽들을 다루고 학습하며, 사물인터넷의 시나리오를 통해 기대되는 결과들을 예측해보는 시간을 가진다.
+        </div>
+    </div></div>
+
     <div id="sub_intro_page">
         <div id="title-text">과목 소개</div>
-        
             
         <!-- 컴과 영역 -->
         <div class="cs-subject">
                 <div class="box box-right box-back1 box-text2" id="cs1">윈도우<br>프로그래밍</div>
 
-                <div class="box box-right box-back2 box-text2" id="cs2">디지털<br>논리회로</div>
+                <div class="box box-right box-back2 box-text2" id="cs2">디지털<br>논리회로</div>   
                 <div class="box box-left box-back1 box-text2" id="cs3">리눅스<br>시스템</div>
-
+            
                 <div class="box box-right box-back2 box-text2" id="cs4">프로그래밍<br>언어론</div>
-                <div class="box box-left box-back1 box-text2" id="cs5">컴퓨터<br>구조</div>
-                <div class="box box-right box-back1 box-text2" id="cs6">웹시스템<br>설계</div>
-                <div class="box box-left box-back1 box-text2" id="cs7">시스템<br>프로그래밍</div>
+                <div class="box box-left box-back1 box-text2" id="cs5">컴퓨터<br>구조</div>             
+                <div class="box box-right box-back1 box-text2" id="cs6">웹시스템<br>설계</div>               
+                <div class="box box-left box-back1 box-text2" id="cs7">시스템<br>프로그래밍</div>   
 
                 <div class="box box-right box-back1 box-text2" id="cs8">컴퓨터<br>네트워크1</div>
                 <div class="box box-left box-back1 box-text2" id="cs9">소프트웨어<br>공학</div>
-
+                
                 <div class="box box-right box-back1 box-text1" id="cs10">컴파일러</div>
                 <div class="box box-left box-back1 box-text2" id="cs11">데이터베이스<br>프로그래밍</div>
                 <div class="box box-right box-back1 box-text2" id="cs12">컴퓨터<br>네트워크2</div>
                 <div class="box box-left box-back1 box-text2" id="cs13">임베디드<br>시스템</div>
 
                 <div class="box box-center box-back1 box-text1" id="cs14">컴퓨터특강</div>
-
+                
                 <div class="box box-right box-back1 box-text2" id="cs15">영상 정보<br>처리</div>
         </div>
-            
+    
         <!-- 공통 과목 영역 -->
         <div class="common-subject">
                 <div class="box box-center box-back3 box-text2" id="c1">컴퓨터과학의 <br> 이해</div>
 
-                <div class="box box-center box-back1 box-text2" id="c2">소프트웨어의<br>이해</div>
-                <div class="box box-center box-back1 box-text2" id="c3">프로그래밍<br>개론</div>
+                <div class="box box-center box-back1 box-text2" id="c2">프로그래밍<br>개론</div>
+                <div class="box box-center box-back1 box-text2" id="c3">소프트웨어의<br>이해</div>
 
                 <div class="box box-center box-back1 box-text1" id="c4">컴퓨터 수학</div>
-
+                
                 <div class="box box-center box-back2 box-text1" id="c5">자료구조</div>
                 <div class="box box-center box-back2 box-text2" id="c6">데이터<br>사이언스 개론</div>
 
                 <div class="box box-center box-back1 box-text2" id="c7">자바<br>프로그래밍</div>
                 <div class="box box-center box-back1 box-text2" id="c8">컴퓨터<br>그래픽스</div>
-
+                
                 <div class="box box-center box-back2 box-text1" id="c9">운영체제</div>
+               
 
-                <div class="box box-center box-back2 box-text1" id="c10">알고리즘</div>
-                <div class="box box-center box-back1 box-text2" id="c11">데이터<br>베이스와 설계</div>
+                <div class="box box-center box-back2 box-text1" id="c10">알고리즘</div>       
+                <div class="box box-center box-back1 box-text2" id="c11">데이터<br>베이스와 설계</div>                
                 <div class="box box-center box-back1 box-text2" id="c12">모바일<br>소프트웨어</div>
-
+               
                 <div class="box box-center box-back1 box-text1" id="c13">인공지능</div>
+                
+                <div class="box box-center box-back1 box-text2" id="c14">네트워크<br>보안</div>            
+                <div class="box box-center box-back1 box-text2" id="c15">클라우드<br>시스템</div>
 
-                <div class="box box-center box-back1 box-text2" id="c14">시스템 종합<br>설계</div>
-
-                <div class="box box-center box-back1 box-text2" id="c15">네트워크<br>보안</div>
-                <div class="box box-center box-back1 box-text2" id="c16">클라우드<br>시스템</div>
+                <div class="box box-center box-back1 box-text2" id="c16">시스템 종합<br>설계</div>
+               
         </div>
-        
+
         <!-- 소웨과목 영역 -->
         <div class="sw-subject">
                 <div class="box box-left box-back1 box-text2" id="sw1">소프트웨어<br>진로 탐색</div>
-
+                
                 <div class="box box-left box-back3 box-text1" id="sw2">통계학 입문</div>
                 
                 <div class="box box-left box-back1 box-text2" id="sw3">경영 정보<br>시스템</div>
                 <div class="box box-right box-back1 box-text2" id="sw4">인터넷 기술<br>융합</div>
-
+               
                 <div class="box box-left box-back2 box-text2" id="sw5">컴퓨터 시스템<br>기초</div>
 
-                <div class="box box-left box-back1 box-text2" id="sw6">데이터 마이닝<br>분석</div>
+                <div class="box box-left box-back1 box-text2" id="sw6">데이터 마이닝<br>분석</div> 
                 <div class="box box-right box-back1 box-text2" id="sw7">소프트웨어<br>분석 및 설계</div>
                 <div class="box box-left box-back1 box-text2" id="sw8">사용자<br>인터페이스</div>
 
-                <div class="box box-left box-back1 box-text1" id="sw9">스토리지</div>
-                <div class="box box-left box-back1 box-text1" id="sw10">빅데이터</div>
+                <div class="box box-left box-back1 box-text1" id="sw9">스토리지</div>   
+                <div class="box box-left box-back1 box-text1" id="sw10">빅데이터</div>  
                 <div class="box box-right box-back1 box-text2" id="sw11">인터렉티브<br>미디어</div>
-
-                <div class="box box-left box-back1 box-text2" id="sw12">바이오<br>인포메틱스 개론</div>
+               
+                <div class="box box-left box-back1 box-text2" id="sw12">바이오<br>인포메틱스 개론</div>       
                 <div class="box box-right box-back1 box-text1" id="sw13">소융특강</div>
-
+               
                 <div class="box box-left box-back1 box-text2" id="sw14">사물인터넷<br>시스템</div>
+               
         </div>
 
-        <div class="lines main-line"></div>  
+        <div class="lines l_1"></div>  
+        <div class="lineDown ld1"></div>
+        <div class="lines l_2"></div>  
+        <div class="lineDown ld2"></div>
+        <div class="lines l_3"></div>  
+        <div class="lineDown ld3"></div>
+        <div class="lines l_4"></div> 
+        <div class="lineDown ld4"></div> 
+        <div class="lines l_5"></div>  
+        <div class="lineDown ld5"></div>
+        <div class="lines l_6"></div>  
+        <div class="lineDown ld6"></div>
+        <div class="lines l_7"></div> 
+        <div class="lineDown ld7"></div> 
+        <div class="lines l_8"></div> 
+        <div class="lineDown ld8"></div> 
             <div class="lines line1" id="l1">
                 <div class="line-circle01"></div>
                 <div class="sw-line01"></div>
@@ -561,98 +897,67 @@
                 <div class="cs-line02"></div>
             </div> 
            
-        
-        
-            <div class="modal_chang">
-                <div class="modal">
-                    <div id="modal_bar">
-                        <div id="modal_buttons">
-                            <div class="button red"></div>
-                            <div class="button yellow"></div>
-                            <div class="button green"></div>
-                        </div>
-                    </div>
-                    <div class="contents">
-                        <!-- 과목 소개 내용 들어갈 곳-->
-                    </div>
-                </div>
-            </div>
-        
     </div>
 
     <script>
         // 모달 정가운데 위치 + 텍스트 추가
-        const modal_chang = document.querySelector(".modal_chang")
-        const contents = document.querySelector(".contents")
-        const modals = document.querySelectorAll(".box");
-        const closebtn = document.getElementById("modal_buttons");
+        const modals = document.querySelectorAll(".modal_chang");
+        const subBox = document.querySelectorAll(".box");
+        const closeButt=document.querySelectorAll('.modal_buttons')
        
-        explain = {
-            "cs1" : "C++ 의 개념적인 부분도 다루면서 코드 작성법을 배울 수 있는 과목으로 windows 환경에서 visual programming을 한다. 또한 MFC Programming도 학습한다.",
-            "cs2" : "컴퓨터 시스템을 구성하는 가장 기본적인 회로와 이러한 회로의 구성 원리에 대해 학습한 후 기본 동작 회로의 설계를 학습한다.",
-            "cs3" : "리눅스 운영체제에서의 터미널 명령어 등 기본적인 개념을 배우며 파일 및 프로세스를 중심으로 파일의 기본 개념 및 사용법, 파일 구조, 파일 입출력, 프로세스 등도 학습한다.",
-            "cs4" : "프로그래밍 언어의 종류와 구문법과 설계 방법을 배운다. 이를 통해 프로그래밍 언어에 대한 체계적인 이해 및 응용 능력 향상을 목표로 한다.",
-            "cs5" : "디지털 논리 회로가 선수강 과목이며 실제로 컴퓨터가 어떻게 구성되어 있고, 어떻게 설계하는지를 심층적으로 학습한다. 이를 위해 정보의 표현, 각 단위 장치들의 논리 회로, 제어장치 및 입출력 장치, 기억장치들의 구성을 학습한다.",
-            "cs6" : "소프트웨어의 이해, 프로그래밍 개론이 선수강과목이며 HTML과 CSS, js, jsp, mysql을 한 번에 배울 수 있는 과목으로 프로젝트도 진행한다.",
-            "cs7" : "리눅스를 통해 소프트웨어의 기본 체계를 이해하고, 시스템 소프트웨어 활용 능력을 키울 수 있으며 리눅스 시스템 수업의 심화버전이라고 할 수 있다. 최종적으로 쉘인터프리터를 만드는 수업 리눅스 시스템을 중심으로 파일 및 입출력, 프로세스, 예외처리, 프로세스 간의 통신 등을 이용한 문제 해결에 대해 학습한다.",  
-            "cs8" : "컴퓨터 네트워크에 대한 핵심 개념과 다양한 네트워크 기술을 배우고, 최상위 응용 계층부터 물리계층까지 컴퓨터 네트워크를 구성하는 각 계층(OSI 7계층)에 대해 학습한다.",
-            "cs9" : "대형 자료 처리 소프트웨어 시스템 개발과 유지 관리에 따른 복잡한 공정 상의 문제를 해결하기 위한 여러 방법을 공학적인 측면에서 연구하며 팀플이 있다.",  
-            "cs10" : "컴파일러 모델들을 비교하고, 컴파일러를 이루는 scanner, parser, type checker, source translator, code generator를 이해하고, 간단한 컴파일러를 만들어 본다.",
-            "cs11" : "실제 산업계에서 필요한 데이터 베이스 프로그래밍 기술을 습득할 수 있는 과목으로 데이터 베이스 이론과 프로그래밍 기술을 이용한 데이터 베이스 활용 기법을 습득한 후 실전 프로젝트를 통해서 활용 기법을 학습한다. ",  
-            "cs12" : "컴퓨터 네트워크1이 선수강 과목으로 OSI 7계층의 하위 계층인 네트워크 계층과 데이터 링크 계층, 물리 계층에 대해 학습하고, 네트워크와 멀티미디어 통신에 대해 학습한다.",
-            "cs13" : "하드웨어 디자인, CPU 구조와 하드웨어와 소프트웨어의 임베디드 시스템을 학습한다. verilog HDL를 배워 임베디드 하드웨어과 소프트웨어를 디자인하며 FPGA 실습이 있다.",   
-            "cs14" : "전산학의 최신 주제의 연구 분야 중 교과목에서 다루지 않는 주제들을 배운다. 현대 컴퓨터 시스템의 메모리와 SoC를 기본으로 한 CPU를 배우고, 메모리 구조, 캐시 메모리, CPU의 구조를 학습한다. ",
-            "cs15" : "디저털 영상처리 이론을 습득하고, c프로그래밍을 이용한 영상처리 알고리즘을 구현하는 능력을 키운다. Visual C++과 OpenCV로 디지털 영상처리를 학습한다.",  
-            "c1" : "컴퓨터 과학을 처음 접하는 학생 대상으로 컴퓨터에 대한 일반적인 기본 개념을 배움컴퓨터의 HW/SW등 기본개념, 새로운 기술 동향등을 배운다.",
-            "c2" : "<br> 본격적인 프로그래밍 교과목 수강 전 <br> 소프트웨어의 개념을 이해하고 프로그래밍 기초 개념과 <br> 원리를 쉽게 학습하는 내용으로 python을 배운다. ", 
-            "c3" : "<br> C프로그래밍 언어를 배우며, <br> visual studio의 사용법과 프로그램의 실행등을 학습한다. ",
-            "c4" : "컴퓨터 과학의 기본 개념들의 기초가 되는 수학적 개념들인 집합론, 그래프, 트리, 순열, 행렬, 재귀관계, 부울대수 등을 학습한다.",
-            "c5" : "자료의 표현, 처리, 탐색, 정렬에 대한 개념과 알고리즘을 배우는 과목으로 선형구조, 탐색, 정렬, 비선형구조 등을 C언어로 학습한다.",
-            "c6" : "데이터사이언스란 무엇인지, 데이터 분석에 필요한 기초 개념, 지식등을 배우며 데이터 사이언스 핵심기술인 데이터 모델링, 데이터 마이닝, 머신러닝 등에 대한 기초 개념을 학습한다.",
-            "c7" : "실습강의이며 응용 소프트웨어 개발에 적합한 언어 및 개발 환경의 습득과 소프트웨어 개발 훈련이 목표이며 객체지향 프로그래밍 언어인 Java를 학습한다.",  
-            "c8" : "컴퓨터 그래픽스의 기본원리와 2차원, 3차원, 기하물체의 표현, 변환, 레지스터변환, 조명효과등을 배우며 openGL 라이브러리학습과 제작도구인 unity3D를 사용한다.",
-            "c9" : "운영체제 분야와 관련된 여러 이론을 소개하며 운영체제 설계시 고려할 문제와 그에 대한 해결책 이해를 목표로 한다.",  
-            "c10" : "여러가지 필수 알고리즘들의 기본 개념을 배우고 JAVA나 C++을 이용해 이들을 응용한 프로그램들을 설계하면서 시간복잡도를 계산하는 방법을 학습한다.",
-            "c11" : "데이터베이스와 데이터베이스 시스템에 대한 기초적 이론을 배우고 데이터베이스 설계의 요구사항분석과 논리적 설계, 대표적 모델링 기법인 ER 모델링과 대표적 질의어인 SQL를 배우며 시스템 기본 개념과 정규화 모델링 이론을 학습한다.",  
-            "c12" : "모바일 컴퓨팅에 대한 기본 개념과 원리를 배우며 안드로이드 프로그래밍 실습을 통해 프로그램을 기획, 설계, 개발하는 지식을 습득한다.",
-            "c13" : "인공지능의 기본 개념을 이해하고 경험을 기초로한 문제해결법과 기계학습 데이터마이닝(WEKA) 신경회로망(ANN,CNN.RNN)등의 데이터기반 기법등을 학습한다. ",   
-            "c14" : "학과에서 습득한 기초설계, 심화설계 능력을 기반으로 종합설계 능력을 향상시키기 위한 방법으로 중대형 규모의 소프트웨어 설계 능력의 향상을 목표 3-4명의 팀작업 수행한다.",
-            "c15" : "컴퓨터 네트워크에서 사용되고 있는 보안기술과 암호화 인증기법과 프로토콜 메세지 인증, 키분배와 사용자 인증, 악성소프트웨어등에 관해 학습한다.", 
-            "c16": "클라우드 시스템 기술과 컴퓨팅 패러다임에 대해 학습하며 이를 바탕으로 한 분산 시스템 설계 및 관리기법에 대한 내용과 최신기술 동향을 학습한다., 미니프로젝트도 존재한다.",
-            "sw1" : "교과목과 전공에 대한 소개, 소프트웨어 분야에 대한 진로 탐색이 학기 초반부에 이루어지며, 여러 분야에 종사하는 실무자, 동문 선배, 학과 교수진들을 초청해 총 여섯번의 강연을 진행하며, 선배를 방문하거나, 전시회를 방문해보는 등의 일정도 진행. ",
-            "sw2" : "빅데이터 혹은 데이터 사이언스에 관심이 있는 학생들이 데이터 통계에 대해 가볍게 접해보고 싶을 때 수강해보기 좋으며, 통계학을 처음 접하는 학생들을 위한 과목. 통계학의 기초지식부터, 확률이론, 통계적추론방법을 두루 다룬다. 또한 인문사회분야에서도 널리 사용되는 분산 분석, 회귀분석, 범주형자료분석에 대해 공부한다.",
-            "sw3" : "경영정보 시스템의 개요를 시작으로 우선적으로 컴퓨터와 데이터 관리 및 데이터베이스를 배운다. 이후 본격적으로 정보시스템 구축하고 도입하는 방법, 정보통신과 인터넷 전자상거래와 e-비즈니스에 대해 배우며, 의사결정지원시스템과 지능정보 시스템과 같이 경영의사결정문제를 해결하기 위한 정보기술과 경영정보 시스템의 전략적 활용 및 관리 방안을 종합적으로 학습한다.",
-            "sw4" : "4차 산업혁명 시대 도래에 따른 융합 기술을 기반으로 하는 초연결 사회를 이해하기 위해 학습한다. 컴퓨터의 구조와 멀티미디어, 운영체제, 컴퓨팅 사고, 네트워크, 이동통신 기술, 인터넷 서비스 등 다양한 컴퓨팅 기술들을 실습과 함께 학습하며, 운영체제와, 인공지능 분야는 유망한 분야인 만큼 전문가들을 초청해 수업을 진행한다.",
-            "sw5" : "컴퓨터 시스템의 구조에 관한 제반의 사항들을 이해하기 위해 우선 회로 설계의 입문을 학습한다. 또한 진법체계를 배우고 이 로직의 구현과정을 배우고, 이를 사용한 컴퓨터 기본 동작 회로를 설계할 수 있는 능력을 키운다. 나아가 프로그램이 컴퓨터 상에서 어떻게 실행되는지를 구조적인 관점에서 이해할 수 있도록 한다.",
-            "sw6" : "데이터로부터 숨겨진 패턴이나 지식을 탐색하는 기술인 데이터 마이닝의 여러 이론 및 알고리즘들을 공부한다. 데이터 마이닝의 대표적인 문제인 분류, 탐색, 군집화, 이상 탐지에 사용되는 알고리즘과 기술을 학습하고 직접 구현한다. 파이썬 또는 자바를 사용해서 데이터마이닝 알고리즘을 구현하는 실습 과제가 있다",
-            "sw7" : "소프트웨어 개발에 있어 대상 시스템을 제대로 이해하고 분석해 이를 바탕으로 소프트웨어를 설계하는 것은 매우 중요한 단계이다. 이에 소프트웨어 개발과정을 이해하기위해 요구분석과 문서화, 구조적 분석 방법론에 대해 배우고, 자료흐름도, 자료사전과 소단위 명세서를 직접 작성해본다. 이후 구조적 설계방법과 객체지향 방법론, UML 모델링, 객체지향 설계에 대해 배운다. 팀프로젝트가 있으며, 총 3번의 보고서를 제출한다",  
-            "sw8" : "사람과 원리와 기법에 대해 배우며, 배운 것을 기반으로 상용화 된 VR/AR의 동작 원리를 이해하고 발표하며, 스마트폰을 사용해 AR 그래픽을 구현하고, GPU를 사용컴퓨터의 상호작용을 가능하게 해주는 도구로 사람과 컴퓨터의 상호작용, 상호작용에 이용되는 해 딥러닝 기초이론을 이용한 UI구현 기초를 배운다. 텐서플로우, 유니티 사용",
-            "sw9" : "우리나라가 세계적으로 강세를 보이는 비휘발성 메모리와 이에 대항하기 위해 인텔이 개발한 3D Xpoint는 스토리지 시스템 분야의 중요한 쟁점이다. 이에 이런 스토리지의 주된 매체인 NVM 기반의 SSD와 HDD 뿐만 아니라 스토리지 시스템 자체를 구성하는 기술과 구조를 다룸으로써 스토리지 시스템 전반에 대한 이해를 할 수 있도록 한다. 실습은 없으나 과제물 제출이 있을 수 있다",  
-            "sw10" : "대용량, 초고속, 다양성 등의 특징을 가지는 빅데이터를 처리하기 위한 개념, 이론, 기법, 플랫폼 등을 학습함. 빅데이터의 저장을 위한 분산 저장 시스템, 검색을 위한 NoSQL DB, 처리를 위한 MapReduce 등의 프로그래밍 기법을 살펴보고, 빅데이터 처리를 위한 플랫폼인 Hadoop, Spark 등을 학습한다.",
-            "sw11" : "가상현실 또는 게임 형식 컨텐츠에 관련된 이론과 개발 기법과 소프트웨어의 활용법을 배운다. 3D 그래픽스 이론, 가상공간 모델링, 애니메이션 및 게임 제작 기법, 스크립팅 언어 등을 학습하며 프로젝트 수행을 통하여 자신이 직접 컨텐츠를 설계하고 구현한다.unity를 사용해 3D 그래픽스 기초를 배우고 C#프로그래밍 기초를 학습하며, 물리엔진, 스크립팅, 사운드처리, ui 컴포넌트에 배운다. 실습과제가 있으며, 프로젝트를 완성해 발표해야한다.",  
-            "sw12" : "빅데이터인 생명정보 데이터를 분석하기 위해, 컴퓨터 과학에서 널리 쓰이는 알고리즘들에 생명정보 빅데이터를 적용하는 방법들에 대해 다루며, 서열정렬, 패턴 마이닝, 동적 프로그래밍 등의 알고리즘에 대한 기본 개념들과 머신 러닝에 기반한 최신 생명정보 빅데이터 분석 방법들을 습득한다.",   
-            "sw13" : "컴퓨터 과학 분야의 논리적 사고와 효율적인 표현을 위한 방법론을 다룬다. 이 과정에서 다루는 주요 토픽에는 학습, 교육, 테스트 및 평가, 생성 및 프레젠테이션 논리가 포함된다.질의응답과 발표가 있는 수업이며 원격 수업시 영상자료를 제작해야할 수도 있다.",
-            "sw14" : "예제를 통해 사물인터넷을 실제로 이해하기 위한 이론과 방법론을 다루며, 임베디드 컴퓨팅 장치기술이 포함된다. 사물인터넷을 위한 통신기술과 인터넷/컴퓨터 네트워크 기술을 다룬다. 또한 앞서 다룬 기술에 대한 많은 토픽들을 다루고 학습하며, 사물인터넷의 시나리오를 통해 기대되는 결과들을 예측해보는 시간을 가진다.",
-        } 
+         var funcs=[];
 
-        // cs1 -> c1 -> sw1 순으로 배열 만들면 됨
-        function popModal(key) {
-            subjectContent= explain[key]
-            contents.innerHTML =subjectContent;
-            modal_chang.style.display = "flex";
-        }
+         function popModal(num){
+             return function(){
+                 subBox[num].onclick=function(){
+                     modals[num].style.display="block";
+                 };
+                
+                 closeButt[num].onclick=function(){
+                     modals[num].style.display="none";
+                 }
 
-        function closeModal() {
-            modal_chang.style.display = "none";
-        }
+                 window.onclick=function(e){
+                    let eTarget=e.target
+                    if(eTarget.classList.contains("modal_chang")) {
+                        modals[num].style.display="none"; /* 안먹음.. */
+                    }            
+                }
+             }
+         }
 
-        modals.forEach(function(box){
-            box.addEventListener('click', popModal(box.id)); 
-            closebtn.addEventListener('click', closeModal);
-            // 배경 눌러도 닫히도록
-        });      
+         for(var i=0; i<modals.length; i++){
+             funcs[i]=popModal(i);
+         }
+         for(var j=0; j<modals.length; j++){
+             funcs[j]();
+         }
+
+         
+        
     </script>
 
 
 </body>
 </html>
+
+ <!-- cs1 -> c1 -> sw1 순으로 배열 만들면 됨 -->
+<!-- function popModal(num) {
+    modals[i].style.display = "flex";
+}
+function closeModal(num) {
+    modals[i].style.display = "none";
+}
+
+let i;
+for(i=0;i<subBox.length;i++){
+    subBox[i].addEventListener('click', popModal(i));
+    const closebtn = document.getElementById("modal_buttons");
+    closebtn.addEventListener('click', closeModal(i));
+    //subBox.forEach(function(box){
+    //box.addEventListener('click', popModal(box.id)); 
+    //closebtn.addEventListener('click', closeModal);
+    // + 배경 눌러도 닫히도록
+//}); 
+} -->
+
