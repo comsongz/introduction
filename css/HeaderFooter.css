@@ -1,3 +1,52 @@
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.headerContainer{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: none;
+    font-family: 'GmarketSansLight';
+}
+.logo{
+    position: absolute;
+    left: 2%;
+    font-size: 2em;
+    top: 30px;
+}
+.menu{
+    position: absolute;
+    top: 40px;
+    left: 60%;
+    width: 40%;
+    height: 30%;
+}
+.introduction{
+    position: absolute;
+    left: 5%;
+}
+.curriculum{
+    position: absolute;
+    left: 32%;
+}
+.roadmap{
+    position: absolute;
+    left: 57%;
+}
+.club{
+    position: absolute;
+    left: 80%;
+}
+hr{
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    border: 1px solid black;
+}
 header .logo_tab {
     z-index: 1;
     width: 100%;
