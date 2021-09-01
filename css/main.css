@@ -1,62 +1,24 @@
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0px;
-    padding: 0px;
+    font-family: 'GmarketSansLight';
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: #f9fafe;
 }
 
-.header .logo_tab {
-    z-index: 1;
-    width: 100%;
-    height: 60px;
-    background: #ffffff;
-    border-bottom: 1px solid #c4c4c4;
-    display: flex;
-}
-.header .logo_tab .logoIMG {
-    margin-left: 20px;
-    margin-top: 15px;
-    width: 30px;
-    height: 30px;
-    display: block;
-    text-indent: -9999px;
-}
-.header .logo_tab .wordIMG {
-    margin-left: 15px;
-    margin-top: 20px;
-    height: 24px;
-}
-.header .link_tab {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 35px;
-    background: #ffffff;
-    border-bottom: 1px solid #c4c4c4;
-    font-weight: 600;
-    text-shadow: 0px 2px 2px rgba(41, 38, 31, 0.2);
-}
-.header .link_tab .sm_main {
-    text-decoration: none;
-    float:right;
-    padding: 10px;
-    font-size: 12px;
-    color: #ED695F;
-}
-.header .link_tab .sm_potal {
-    text-decoration: none;
-    float:right;
-    padding: 10px;
-    font-size: 12px;
-    color: #F4BE4F;
-}
-.header .link_tab .snowboard {
-    text-decoration: none;
-    float:right;
-    padding: 10px;
-    font-size: 12px;
-    color: #62C655;
-    margin-right: 15px;
-}
 .inner {
     padding-left: 20px;
     padding-right: 20px;
@@ -66,11 +28,18 @@ body {
     position: relative;
 }
 .inner .main__banner {
+    font-family: 'GmarketSansMedium';
     margin-top: 40px;
     margin-bottom: 40px;
-    font-size: 37px;
+    font-size: 35px;
     color: #626262;
     text-shadow: 0px 2px 2px rgba(41, 38, 31, 0.2);
+}
+.inner .bannerHR {
+    font-family: 'GmarketSansMedium';
+    color: rgba(41, 38, 31, 0.2);
+    width: 80%;
+    margin-top:0px;
 }
 
 .classTab {
@@ -81,7 +50,6 @@ body {
     padding-left: 15px;
     margin: 0 auto;
     box-sizing: border-box;
-    position: relative;
 }
 .classTab li {
     display: flex;  
@@ -90,7 +58,8 @@ body {
     width: 33%;
 }
 .classTab li a {
-    font-size: 14px;
+    font-family: 'GmarketSansLight';
+    font-size: 12px;
     font-weight: bold;
     text-decoration: none;
     margin: 0 auto;
@@ -98,6 +67,7 @@ body {
 }
 
 .inner .banner {
+    font-family: 'GmarketSansMedium';
     display: block;
     padding: 35px;
     font-size: 40px;
@@ -105,13 +75,14 @@ body {
 }
 
 .inner .major_title_1 {
+    font-family: 'GmarketSansLight';
     padding-top: 30px;
-    padding-bottom: 3px;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 41.02px;
     text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
 .inner .major_title_2 {
+    font-family: 'GmarketSansMedium';
     display: block;
     margin: 0 auto;
     font-size: 40px;
@@ -119,22 +90,24 @@ body {
     text-shadow: 0px 6px 8px rgba(0,0,0,0.25);
 }
 .inner .major_title_3 {
+    font-family: 'GmarketSansLight';
     display: block;
     margin: 0 auto;
-    padding-top: 15px;
+    padding-top: 13px;
     padding-bottom: 20px;
     font-size: 15px;
     font-weight: lighter;
     text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
+
 .inner .summary__title {
     display: block;
     padding-top: 10px;
     font-size: 18px;
 }
-.inner hr {
-    border: solid 1px #000000;
-    width: 100px; 
+.inner .summaryHR {
+    color: #3c4146;
+    width: 150px; 
 }
 .inner p {
     margin: auto;
@@ -145,59 +118,12 @@ body {
     padding-top: 10px;
     font-size:14px;
     color: #626262;
-    padding-bottom: 20px;
+    padding-bottom: 70px;
 }
 .inner .summary__description span {
     color: #000000;
 }
 
-.pfInner {
-    max-width: 800px;
-}
-.pfInner .pfInfo {
-    display: table;
-    padding: 30px;
-    position: relative;
-    margin: 0 auto;
-    vertical-align: middle;
-}
-.pfInner img {
-    display: table-cell;
-    width: 120px;
-    height: 120px;
-    padding: 30px;
-    border-radius: 50%;
-}
-.pfInner .wrapper {
-    display: table-cell;
-    height: 130px;
-    padding-left: 30px;
-    padding-right: 30px;
-    vertical-align: middle;
-    position: relative;
-    margin: auto;
-}
-.pfInner span {
-    width: 140px;
-    font-size: 12px;
-    font-weight:550;
-    display: block;
-    padding-top: 15px;
-}
-.pfInner .wrapper2 {
-    display: table-cell;
-    height: 150px;
-    padding-top: 32px;
-    padding-left: 30px;
-    padding-right: 30px;
-    vertical-align: middle;
-    position: relative;
-    margin: auto;
-}
-.pfInner hr {
-    width: 400px;
-    border: 1px solid #626262;
-}
 .main-menu {
     display: flex;
 }
@@ -227,4 +153,162 @@ body {
 }
 .toggle.on {
     display: block;
+}
+.pfInfo .name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #0578FE;
+}
+
+.mainPage-banner {
+    margin-top: 70px;
+    font-size: 60px;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 0px 6px 8px rgba(0,0,0,0.25);
+}
+.mainPage-banner2 {
+    margin-top: 10px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    color: #626262;
+    text-shadow: 0px 6px 8px rgba(0,0,0,0.25);
+}
+.mainIMG {
+    width: 50%;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.section {
+    position: relative; 
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.inner .tiles {
+    margin-bottom: 20px;
+    height: 1500px;
+}
+.inner .tiles li {
+    list-style-type : none;
+    border-radius: 15px;
+    background: #ffffff;
+    padding: 20px 10px;
+    text-align: center;
+    line-height: 1.5;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    float: left;
+    width: 23%;
+    height: 280px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(47, 76, 207, 0.2);
+}
+.inner .tiles li:last-child {
+  border-right: none;
+}
+.inner .tiles li img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  padding: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 1px solid rgba(41, 38, 31, 0.2);
+  box-shadow: 1px 1px 5px 1px rgba(47, 76, 207, 0.2);
+}
+.inner .tiles li h3 {
+    font-family: 'GmarketSansMedium';
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.inner .tiles li p {
+  font-size: 10px;
+  margin-bottom: 4px;
+  color: #767676;
+}
+.inner .tiles .majordiv {
+    display: inline-block;
+    background: #eaeefd;
+    color: #0578FE;
+    font-size: 8px;
+    padding: 3px 12px 3px 12px;
+    border-radius: 4px;
+    margin: 3px 18px 3px 18px;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgba(121, 137, 207, 0.2);
+}
+.inner .tiles .office{
+    font-size: 10px;
+    display: block;
+    width: 45%;
+    background: #eaeefd;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+    float: left;
+    box-shadow: 1px 1px 1px 1px rgba(121, 137, 207, 0.2);
+}
+/* WHERE IS */
+.section--where-is .inner {
+  padding-top: 80px;
+}
+
+
+/* WHERE IS */
+.section--where-is .inner {
+  padding-top: 80px;
+} */
+#map {
+  width: 100%;
+  height: 400px;
+  margin-top : 40px;
+  border: 1px solid rgba(0,0,0,.2);
+  border-bottom: none;
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  box-sizing: border-box;
+}
+
+/* PRICING CARD  */
+.section--pricing {
+  background: linear-gradient(#f5f5f5, #fff);
+}
+.section--pricing .inner {
+  padding: 80px 0;
+}
+.section--pricing .card {
+  display: flex;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.section--pricing .card .cell {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section--pricing .card .cell1 .btn {
+  height: 50px;
+  font-size: 16px;
+}
+.section--pricing .card .cell2 {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  flex: 1;
+  border-left: 1px solid #e5e5e5;
+}
+.section--feature .pfInfoDiv {
+    border:rgba(41, 38, 31, 0.2);
+    border-radius: 50%;
 }
